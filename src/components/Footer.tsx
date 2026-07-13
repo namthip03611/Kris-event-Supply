@@ -16,7 +16,7 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
   };
 
   return (
-    <footer className="bg-[#0F0F0F] text-neutral-400 border-t border-white/10 pt-16 pb-8" id="app-footer">
+    <footer className="bg-navy text-neutral-400 border-t border-navy/60 pt-16 pb-8" id="app-footer">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           {/* Column 1: Brand Info */}
@@ -25,16 +25,16 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
               <span className="font-display text-2xl font-black tracking-tight text-white uppercase">
                 KRIS<span className="text-accent">.</span>
               </span>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400 ml-2 border-l border-white/10 pl-2">
+              <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-400 ml-2 border-l border-white/20 pl-2">
                 Event Solutions
               </span>
             </div>
-            <p className="text-sm leading-relaxed text-neutral-500">
+            <p className="text-sm leading-relaxed text-neutral-400">
               {currentLanguage === 'th'
                 ? 'ผู้นำด้านการจัดทีมบุคลากรและทีมรันคิวภาคสนาม พริตตี้สตาฟ และ PC คุณภาพสูง ครอบคลุมกิจกรรมทางการตลาดทุกรูปแบบทั่วประเทศ'
                 : 'A premier provider of elite event crews, promotional talents, and Point-of-Sale specialists covering marketing activations nationwide.'}
             </p>
-            <div className="flex items-center space-x-2 text-xs text-accent bg-accent/10 px-3 py-1.5 rounded-sm border border-accent/20 w-fit font-mono font-bold">
+            <div className="flex items-center space-x-2 text-xs text-accent bg-accent/5 px-3 py-1.5 rounded-sm border border-accent/20 w-fit font-mono font-bold">
               <ShieldCheck className="w-4 h-4 shrink-0" />
               <span>
                 {currentLanguage === 'th' ? 'ฐานข้อมูลสตาฟที่ได้รับการตรวจสอบประวัติ' : 'Verified Staff Sourcing Database'}
@@ -47,11 +47,11 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
             <h3 className="font-display text-sm font-black text-white tracking-widest uppercase mb-6">
               {currentLanguage === 'th' ? 'เมนูนำทาง' : 'Navigation'}
             </h3>
-            <ul className="space-y-3.5 text-sm font-mono text-[11px] uppercase tracking-wider">
+            <ul className="space-y-3.5 text-sm font-mono text-[11px] uppercase tracking-wider text-neutral-400">
               <li>
                 <button
                   onClick={() => handleNavClick('home')}
-                  className="hover:text-accent transition-colors cursor-pointer text-left"
+                  className="hover:text-accent transition-colors cursor-pointer text-left text-neutral-400"
                 >
                   {t.navHome}
                 </button>
@@ -59,7 +59,7 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
               <li>
                 <button
                   onClick={() => handleNavClick('about')}
-                  className="hover:text-accent transition-colors cursor-pointer text-left"
+                  className="hover:text-accent transition-colors cursor-pointer text-left text-neutral-400"
                 >
                   {t.navAbout}
                 </button>
@@ -67,7 +67,7 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
               <li>
                 <button
                   onClick={() => handleNavClick('services')}
-                  className="hover:text-accent transition-colors cursor-pointer text-left"
+                  className="hover:text-accent transition-colors cursor-pointer text-left text-neutral-400"
                 >
                   {t.navServices}
                 </button>
@@ -75,7 +75,7 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
               <li>
                 <button
                   onClick={() => handleNavClick('portfolio')}
-                  className="hover:text-accent transition-colors cursor-pointer text-left"
+                  className="hover:text-accent transition-colors cursor-pointer text-left text-neutral-400"
                 >
                   {t.navPortfolio}
                 </button>
@@ -88,17 +88,17 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
             <h3 className="font-display text-sm font-black text-white tracking-widest uppercase mb-6">
               {currentLanguage === 'th' ? 'บริการยอดนิยม' : 'Popular Services'}
             </h3>
-            <ul className="space-y-3 text-sm text-neutral-500 font-mono text-[11px] uppercase tracking-wider">
-              <li>
+            <ul className="space-y-3 text-sm text-neutral-400 font-mono text-[11px] uppercase tracking-wider">
+              <li className="hover:text-accent transition-colors">
                 {currentLanguage === 'th' ? 'พนักงานแนะนำสินค้า (PC / BA)' : 'Product PC / Beauty Advisors'}
               </li>
-              <li>
+              <li className="hover:text-accent transition-colors">
                 {currentLanguage === 'th' ? 'พิธีกรดำเนินรายการ (MC)' : 'Professional Event MC'}
               </li>
-              <li>
+              <li className="hover:text-accent transition-colors">
                 {currentLanguage === 'th' ? 'ทีมพริตตี้ดูแลลูกค้า VIP' : 'Pretty Talents & VIP Hospitality'}
               </li>
-              <li>
+              <li className="hover:text-accent transition-colors">
                 {currentLanguage === 'th' ? 'กิจกรรมคาราวานส่งเสริมการตลาด' : 'Roadshows & Brand Activation'}
               </li>
             </ul>
@@ -115,13 +115,13 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
             </div>
             <div className="flex items-center space-x-3 text-sm text-neutral-400">
               <Phone className="w-5 h-5 text-accent shrink-0" />
-              <a href="tel:0647376445" className="hover:text-white transition-colors font-mono">
+              <a href="tel:0647376445" className="hover:text-accent transition-colors font-mono text-neutral-400">
                 +66 (0) 64-737-6445
               </a>
             </div>
             <div className="flex items-center space-x-3 text-sm text-neutral-400">
               <Mail className="w-5 h-5 text-accent shrink-0" />
-              <a href="mailto:kakn1144@gmail.com" className="hover:text-white transition-colors font-mono">
+              <a href="mailto:kakn1144@gmail.com" className="hover:text-accent transition-colors font-mono text-neutral-400">
                 kakn1144@gmail.com
               </a>
             </div>
@@ -133,13 +133,13 @@ export default function Footer({ currentLanguage, setActiveView }: FooterProps) 
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-600 gap-4 font-mono">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-neutral-500 gap-4 font-mono">
           <p>
             &copy; {new Date().getFullYear()} KRIS Event Solutions. All rights reserved.
           </p>
           <div className="flex space-x-6">
-            <span>{currentLanguage === 'th' ? 'นโยบายความเป็นส่วนตัว' : 'Privacy Policy'}</span>
-            <span>{currentLanguage === 'th' ? 'ข้อตกลงการใช้บริการ' : 'Terms of Service'}</span>
+            <span className="hover:text-accent transition-colors cursor-pointer">{currentLanguage === 'th' ? 'นโยบายความเป็นส่วนตัว' : 'Privacy Policy'}</span>
+            <span className="hover:text-accent transition-colors cursor-pointer">{currentLanguage === 'th' ? 'ข้อตกลงการใช้บริการ' : 'Terms of Service'}</span>
           </div>
         </div>
       </div>

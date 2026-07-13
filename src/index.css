@@ -4,8 +4,11 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", sans-serif;
-  --color-accent: #FF3E00;
-  --color-accent-hover: #E03600;
+  --color-accent: #E9C46A;
+  --color-accent-hover: #D4A373;
+  --color-navy: #2B1D12;
+  --color-charcoal: #4A3728;
+  --color-off-white: #F7F1E3;
 }
 
 /* Bold Typography / Brutalist Minimalist Utilities */
@@ -24,12 +27,32 @@
 }
 
 .outline-text {
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.4);
+  -webkit-text-stroke: 1.5px rgba(15, 23, 42, 0.2);
   color: transparent;
 }
 
 .outline-text-thick {
+  -webkit-text-stroke: 2.5px rgba(15, 23, 42, 0.7);
+  color: transparent;
+}
+
+.outline-text-white {
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3);
+  color: transparent;
+}
+
+.outline-text-white-thick {
   -webkit-text-stroke: 2.5px rgba(255, 255, 255, 0.8);
+  color: transparent;
+}
+
+.outline-text-gold {
+  -webkit-text-stroke: 1.5px rgba(233, 196, 106, 0.3);
+  color: transparent;
+}
+
+.outline-text-gold-thick {
+  -webkit-text-stroke: 2.5px rgba(233, 196, 106, 0.8);
   color: transparent;
 }
 
@@ -50,5 +73,5 @@ html {
 }
 
 body {
-  background-color: #0A0A0A;
+  background-color: #F7F1E3;
 }

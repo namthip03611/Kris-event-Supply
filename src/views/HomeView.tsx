@@ -88,17 +88,17 @@ export default function HomeView({
   return (
     <div id="home-view-container">
       {/* 1. Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#0A0A0A] text-white" id="hero-section">
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-navy text-white" id="hero-section">
         {/* Background Image Hotlink with modern dark overlays */}
         <div className="absolute inset-0 z-0">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDc0D-Qa-lKasFfA5PWJnd96awS8AA0L7Tsf2a_HWBYuRDUCWKJIrLUVkwk4G-fQcdCPRJSD8r-kU5ChLCuN3Qs20FQGBkb_UTWxSahjLxyKx6Syh5u-K5NOId05Uofj6FXGCTIQTbAuQf38gZQuDYwsCameHl6L2fRoxLCPs_hYPlFUlEyYbM8wArciZxHZN7VbQMdMkosd4cG2xkKc3bd5dWp8UKladC3OJFFSdjSzJUbZlIDObpU"
             alt="KRIS Event Field Team Banner"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover object-center scale-105 filter brightness-45 contrast-110 saturate-50"
+            className="w-full h-full object-cover object-center scale-105 filter grayscale contrast-115 saturate-50 brightness-[0.4] opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/75 to-[#0A0A0A]/30" />
-          <div className="absolute inset-0 bg-radial-at-c from-accent/15 via-transparent to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/85 to-navy/40" />
+          <div className="absolute inset-0 bg-radial-at-c from-accent/10 via-transparent to-transparent opacity-85" />
         </div>
 
         {/* Content */}
@@ -110,7 +110,7 @@ export default function HomeView({
             className="space-y-8"
           >
             {/* Top Badge */}
-            <div className="inline-flex items-center space-x-2 bg-accent/15 border border-accent/35 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-accent">
+            <div className="inline-flex items-center space-x-2 bg-accent/10 border border-accent/25 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase text-accent">
               <Sparkles className="w-3.5 h-3.5 animate-pulse text-accent" />
               <span>{currentLanguage === 'th' ? 'พาร์ทเนอร์สตาฟอันดับ 1 ของคุณ' : 'YOUR NO.1 STAFFING PARTNER'}</span>
             </div>
@@ -118,7 +118,7 @@ export default function HomeView({
             {/* Headline with Bold Typographic Pairing */}
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-black uppercase tracking-tight max-w-5xl mx-auto leading-[0.85] text-white drop-shadow-sm">
               <span className="block">{currentLanguage === 'th' ? 'ทีมงานภาคสนาม' : 'PROFESSIONAL'}</span>
-              <span className="block outline-text-thick my-2">{currentLanguage === 'th' ? 'มืออาชีพ' : 'FIELD STAFFING'}</span>
+              <span className="block outline-text-gold-thick my-2">{currentLanguage === 'th' ? 'มืออาชีพ' : 'FIELD STAFFING'}</span>
               <span className="block text-accent">{currentLanguage === 'th' ? 'เพื่อแบรนด์ของคุณ' : 'FOR YOUR BRAND'}</span>
             </h1>
 
@@ -134,14 +134,14 @@ export default function HomeView({
                   setActiveView('services');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="w-full sm:w-auto px-10 py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-white bg-accent hover:bg-accent-hover shadow-xl shadow-accent/20 transition-all cursor-pointer"
+                className="w-full sm:w-auto px-10 py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-navy bg-accent hover:bg-accent-hover shadow-xl shadow-accent/20 transition-all cursor-pointer"
                 id="hero-btn-quote"
               >
                 {t.btnQuote}
               </button>
               <a
                 href="#contact-section"
-                className="w-full sm:w-auto px-10 py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-neutral-300 bg-black/40 border border-white/10 hover:text-white hover:bg-white/5 hover:border-white/25 transition-all text-center"
+                className="w-full sm:w-auto px-10 py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/40 transition-all text-center"
                 id="hero-btn-contact"
               >
                 {t.btnContact}
@@ -151,35 +151,35 @@ export default function HomeView({
         </div>
 
         {/* Diagonal cut effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-[#0A0A0A] clip-path-diagonal" />
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-off-white clip-path-diagonal" />
       </section>
 
       {/* 2. Key Metrics Row */}
-      <section className="bg-[#0A0A0A] py-12 border-b border-white/10" id="metrics-section">
+      <section className="bg-neutral-50 py-12 border-b border-neutral-200" id="metrics-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
             {/* Metric 1 */}
-            <div className="p-6 rounded-lg bg-[#0F0F0F] border border-white/10 flex flex-col items-center">
+            <div className="p-6 rounded-lg bg-white border border-neutral-200 flex flex-col items-center shadow-sm">
               <Award className="w-8 h-8 text-accent mb-3" />
-              <span className="font-display text-2xl font-black text-white tracking-tight">{t.statExp}</span>
+              <span className="font-display text-2xl font-black text-neutral-900 tracking-tight">{t.statExp}</span>
               <span className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] font-mono mt-1">
                 {currentLanguage === 'th' ? 'ความเชี่ยวชาญการดำเนินงาน' : 'OPERATIONAL EXPERTISE'}
               </span>
             </div>
 
             {/* Metric 2 */}
-            <div className="p-6 rounded-lg bg-[#0F0F0F] border border-white/10 flex flex-col items-center">
+            <div className="p-6 rounded-lg bg-white border border-neutral-200 flex flex-col items-center shadow-sm">
               <Users className="w-8 h-8 text-accent mb-3" />
-              <span className="font-display text-2xl font-black text-white tracking-tight">{t.statDb}</span>
+              <span className="font-display text-2xl font-black text-neutral-900 tracking-tight">{t.statDb}</span>
               <span className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] font-mono mt-1">
                 {currentLanguage === 'th' ? 'ครอบคลุมทุกโปรไฟล์งาน' : 'MULTIPLE TALENT PROFILES'}
               </span>
             </div>
 
             {/* Metric 3 */}
-            <div className="p-6 rounded-lg bg-[#0F0F0F] border border-white/10 flex flex-col items-center">
+            <div className="p-6 rounded-lg bg-white border border-neutral-200 flex flex-col items-center shadow-sm">
               <Globe className="w-8 h-8 text-accent mb-3" />
-              <span className="font-display text-2xl font-black text-white tracking-tight">{t.statCoverage}</span>
+              <span className="font-display text-2xl font-black text-neutral-900 tracking-tight">{t.statCoverage}</span>
               <span className="text-[10px] text-neutral-500 uppercase tracking-[0.2em] font-mono mt-1">
                 {currentLanguage === 'th' ? 'รวดเร็ว ทุกภูมิภาค' : 'FAST PROVINCIAL DISPATCH'}
               </span>
@@ -189,21 +189,21 @@ export default function HomeView({
       </section>
 
       {/* 3. About Us Brief Section */}
-      <section className="bg-[#0A0A0A] py-24 text-white" id="about-brief-section">
+      <section className="bg-white py-24 text-neutral-900" id="about-brief-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
             {/* Text details */}
             <div className="lg:col-span-7 space-y-6">
-              <span className="text-[10px] font-bold text-accent uppercase tracking-widest font-mono bg-accent/10 px-3.5 py-1.5 rounded-md">
+              <span className="text-[10px] font-bold text-accent uppercase tracking-widest font-mono bg-accent/5 px-3.5 py-1.5 rounded-md">
                 {t.navAbout}
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-white leading-none uppercase">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-black text-neutral-900 leading-none uppercase">
                 {t.aboutBriefTitle}
               </h2>
-              <p className="font-sans text-neutral-300 text-base leading-relaxed">
+              <p className="font-sans text-neutral-600 text-base leading-relaxed">
                 {t.aboutBriefSubtitle}
               </p>
-              <p className="font-sans text-neutral-400 text-sm leading-relaxed">
+              <p className="font-sans text-neutral-500 text-sm leading-relaxed">
                 {currentLanguage === 'th'
                   ? 'เราเชื่อว่าทีมงานภาคสนามคือเสาหลักในการถ่ายทอดเอกลักษณ์ของแบรนด์ ดังนั้นทุกสตาฟ พริตตี้ และเอ็มซีในความดูแลของเรา จึงได้รับการอบรมความรู้สุขอนามัย มารยาทสังคม และทักษะการโน้มน้าวใจเป็นพิเศษก่อนลงพื้นที่จริง'
                   : 'We believe field staff represents the vital core of your brand experience. Hence, every crew member, model, and PC undergoes strict brand briefs, hospitality reviews, and sanitation protocol training before stepping foot on-site.'}
@@ -214,7 +214,7 @@ export default function HomeView({
                     setActiveView('about');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-accent hover:text-white transition-colors group"
+                  className="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-accent hover:text-neutral-900 transition-colors group"
                   id="about-learn-more"
                 >
                   <span>{currentLanguage === 'th' ? 'ทำความรู้จักพาร์ทเนอร์ของเรา' : 'Learn more about us'}</span>
@@ -225,18 +225,18 @@ export default function HomeView({
 
             {/* Event Coordinator Image hotlink as mockup */}
             <div className="lg:col-span-5 relative">
-              <div className="absolute inset-0 bg-accent rounded-lg transform rotate-2 scale-102 opacity-10 blur-lg" />
-              <div className="relative bg-[#0F0F0F] border border-white/10 rounded-lg overflow-hidden aspect-[4/5] shadow-2xl">
+              <div className="absolute inset-0 bg-accent rounded-lg transform rotate-2 scale-102 opacity-5 blur-lg" />
+              <div className="relative bg-white border border-neutral-200 rounded-lg overflow-hidden aspect-[4/5] shadow-xl">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFbC6O2LPQE9vU9xHrCH9JF-zVxdtNOu0o__42jcJCBEtuY64NqSmdwlkdjL0N1rFLjx6mYF6SKjiY2tmvbZxPdfJl7jnYaBpAM0OMMb2BnwQKEFG26B7so5xljL_KhT1-JRksYXqjTpVGAU-oWLbZ6V-4IyvIK1XPRP79DXAO1gxT0wvMr97OGcghChwNtrUuR-vVKPAIYmbNgwhf_vcRN1r1ikyEvLxfVppfrCbRtoRv1EtUokxj"
                   alt="KRIS Event solutions smiling coordinator"
                   referrerPolicy="no-referrer"
                   className="w-full h-full object-cover object-center filter grayscale contrast-110 saturate-75 transform hover:scale-105 hover:grayscale-0 transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-transparent to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-[#0F0F0F]/95 backdrop-blur border border-white/10">
-                  <span className="text-[9px] text-neutral-500 font-mono block tracking-wider">STAFF COORDINATOR</span>
-                  <span className="text-xs font-bold text-white mt-1 block">
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-white/95 backdrop-blur border border-neutral-200">
+                  <span className="text-[9px] text-neutral-400 font-mono block tracking-wider">STAFF COORDINATOR</span>
+                  <span className="text-xs font-bold text-neutral-900 mt-1 block">
                     {currentLanguage === 'th' ? 'คุณกฤษณา และทีมฝ่ายสรรหาภาคสนาม' : 'Kritsana & Sourcing Management Team'}
                   </span>
                 </div>
@@ -247,16 +247,16 @@ export default function HomeView({
       </section>
 
       {/* 4. Bento Grid Services Summary Section */}
-      <section className="bg-[#0A0A0A] py-24 text-white border-b border-white/10" id="services-summary-section">
+      <section className="bg-neutral-50 py-24 text-neutral-900 border-b border-neutral-200" id="services-summary-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-[10px] font-bold text-accent uppercase tracking-widest font-mono">
               {t.navServices}
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-black text-white mt-3 uppercase tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-black text-neutral-900 mt-3 uppercase tracking-tight">
               {t.servicesBentoTitle}
             </h2>
-            <p className="text-sm text-neutral-400 mt-3">
+            <p className="text-sm text-neutral-500 mt-3">
               {t.servicesBentoSubtitle}
             </p>
           </div>
@@ -264,25 +264,25 @@ export default function HomeView({
           {/* Bento layout */}
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
             {/* Card 1: Event Staffing (Large card, image bg) */}
-            <div className="md:col-span-8 group relative bg-[#0F0F0F] rounded-lg border border-white/10 overflow-hidden aspect-[16/9] md:aspect-auto md:min-h-[350px] flex flex-col justify-end p-6 sm:p-8 shadow-lg transition-all duration-500 hover:border-accent">
+            <div className="md:col-span-8 group relative bg-white rounded-lg border border-neutral-200 overflow-hidden aspect-[16/9] md:aspect-auto md:min-h-[350px] flex flex-col justify-end p-6 sm:p-8 shadow-sm transition-all duration-500 hover:border-accent">
               <div className="absolute inset-0 z-0">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPQi2APOltxllcnJSITA2ABozof6lb2XOMuIyERHAjDpGN04iawn6RL_nhbI-GUvteMISortvnic2xxApChJW4GR7HK9Q3x25XmwYoOuR_cgYBNo_ZFVwW1I3eNF_5q1mxu3axFP6pyOrOKA3hP1nr-rH8cwY-uXOAbcDfcUNvllTR_TXXR0EV625HbAPwg4TmMmUMJa3V75Lsr3KqEvXOCO4ug3GAo94dNmBhogsIYfWGPa5vzmPP"
                   alt="Event Staffing talent team"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center filter grayscale contrast-125 saturate-50 brightness-[0.25] group-hover:scale-102 group-hover:grayscale-0 group-hover:brightness-[0.4] transition-all duration-700"
+                  className="w-full h-full object-cover object-center filter grayscale contrast-125 saturate-50 brightness-[1.02] opacity-[0.14] group-hover:scale-102 group-hover:grayscale-0 group-hover:brightness-[1.05] transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
               </div>
 
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 bg-accent/10 text-accent rounded-md border border-accent/20 flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/5 text-accent rounded-md border border-accent/20 flex items-center justify-center">
                   <Users className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl sm:text-2xl font-bold text-white uppercase">
+                <h3 className="font-display text-xl sm:text-2xl font-bold text-neutral-900 uppercase">
                   {currentLanguage === 'th' ? SERVICES_DATA[0].titleTh : SERVICES_DATA[0].titleEn}
                 </h3>
-                <p className="text-sm text-neutral-300 max-w-xl">
+                <p className="text-sm text-neutral-600 max-w-xl">
                   {currentLanguage === 'th' ? SERVICES_DATA[0].descriptionTh : SERVICES_DATA[0].descriptionEn}
                 </p>
                 <button
@@ -290,7 +290,7 @@ export default function HomeView({
                     setActiveView('services');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-white flex items-center space-x-1.5 pt-2"
+                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-neutral-900 flex items-center space-x-1.5 pt-2"
                 >
                   <span>{currentLanguage === 'th' ? 'ดูรายละเอียดบริการนี้' : 'Learn more about staffing'}</span>
                   <span>→</span>
@@ -299,15 +299,15 @@ export default function HomeView({
             </div>
 
             {/* Card 2: Retail Support (Solid block accent) */}
-            <div className="md:col-span-4 bg-[#0F0F0F] rounded-lg border border-white/10 p-6 sm:p-8 flex flex-col justify-between shadow-lg transition-all hover:border-accent min-h-[300px]">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-md border border-accent/20 flex items-center justify-center">
+            <div className="md:col-span-4 bg-white rounded-lg border border-neutral-200 p-6 sm:p-8 flex flex-col justify-between shadow-sm transition-all hover:border-accent min-h-[300px]">
+              <div className="w-10 h-10 bg-accent/5 text-accent rounded-md border border-accent/20 flex items-center justify-center">
                 <Store className="w-5 h-5" />
               </div>
               <div className="space-y-3 mt-12 md:mt-0">
-                <h3 className="font-display text-lg sm:text-xl font-bold text-white uppercase">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-neutral-900 uppercase">
                   {currentLanguage === 'th' ? SERVICES_DATA[1].titleTh : SERVICES_DATA[1].titleEn}
                 </h3>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-neutral-500">
                   {currentLanguage === 'th' ? SERVICES_DATA[1].descriptionTh : SERVICES_DATA[1].descriptionEn}
                 </p>
                 <button
@@ -315,7 +315,7 @@ export default function HomeView({
                     setActiveView('services');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-white flex items-center space-x-1"
+                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-neutral-900 flex items-center space-x-1"
                 >
                   <span>{currentLanguage === 'th' ? 'ดูรายละเอียด' : 'Details'}</span>
                   <span>→</span>
@@ -324,15 +324,15 @@ export default function HomeView({
             </div>
 
             {/* Card 3: Exhibition Support */}
-            <div className="md:col-span-4 bg-[#0F0F0F] rounded-lg border border-white/10 p-6 sm:p-8 flex flex-col justify-between shadow-lg transition-all hover:border-accent min-h-[300px]">
-              <div className="w-10 h-10 bg-accent/10 text-accent rounded-md border border-accent/20 flex items-center justify-center">
+            <div className="md:col-span-4 bg-white rounded-lg border border-neutral-200 p-6 sm:p-8 flex flex-col justify-between shadow-sm transition-all hover:border-accent min-h-[300px]">
+              <div className="w-10 h-10 bg-accent/5 text-accent rounded-md border border-accent/20 flex items-center justify-center">
                 <Award className="w-5 h-5" />
               </div>
               <div className="space-y-3 mt-12 md:mt-0">
-                <h3 className="font-display text-lg sm:text-xl font-bold text-white uppercase">
+                <h3 className="font-display text-lg sm:text-xl font-bold text-neutral-900 uppercase">
                   {currentLanguage === 'th' ? SERVICES_DATA[2].titleTh : SERVICES_DATA[2].titleEn}
                 </h3>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-neutral-500">
                   {currentLanguage === 'th' ? SERVICES_DATA[2].descriptionTh : SERVICES_DATA[2].descriptionEn}
                 </p>
                 <button
@@ -340,7 +340,7 @@ export default function HomeView({
                     setActiveView('services');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-white flex items-center space-x-1"
+                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-neutral-900 flex items-center space-x-1"
                 >
                   <span>{currentLanguage === 'th' ? 'ดูรายละเอียด' : 'Details'}</span>
                   <span>→</span>
@@ -349,25 +349,25 @@ export default function HomeView({
             </div>
 
             {/* Card 4: KOL Coordination (Image bg) */}
-            <div className="md:col-span-8 group relative bg-[#0F0F0F] rounded-lg border border-white/10 overflow-hidden aspect-[16/9] md:aspect-auto md:min-h-[300px] flex flex-col justify-end p-6 sm:p-8 shadow-lg transition-all duration-500 hover:border-accent">
+            <div className="md:col-span-8 group relative bg-white rounded-lg border border-neutral-200 overflow-hidden aspect-[16/9] md:aspect-auto md:min-h-[300px] flex flex-col justify-end p-6 sm:p-8 shadow-sm transition-all duration-500 hover:border-accent">
               <div className="absolute inset-0 z-0">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9BL1s4RxyAwuJ14nYpsWObyaPkfTcv_2jiJa6klgjQlbe_RdCsEpfrbJI9Hv9maZdgmmbXxISZ-j4iG5ssJKBzxU56xinv9q25kQHLQSN5aqcWXSznAKALTH8av1ZSrOOiXdKqQeAr1ycl8inbmMJdLox_DtRjMFykqRLlJl_hA9SGQX0Y1BmITzpbTrdbwkxuHqP1F1LR2p4q5fz-95Afl3_uHJbLZ9IwA-ig4D2rZCA0-S-tFp9"
                   alt="KOL Coordination & influencer agency"
                   referrerPolicy="no-referrer"
-                  className="w-full h-full object-cover object-center filter grayscale contrast-125 saturate-50 brightness-[0.25] group-hover:scale-102 group-hover:grayscale-0 group-hover:brightness-[0.4] transition-all duration-700"
+                  className="w-full h-full object-cover object-center filter grayscale contrast-125 saturate-50 brightness-[1.02] opacity-[0.14] group-hover:scale-102 group-hover:grayscale-0 group-hover:brightness-[1.05] transition-all duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
               </div>
 
               <div className="relative z-10 space-y-3">
-                <div className="w-10 h-10 bg-accent/10 text-accent rounded-md border border-accent/20 flex items-center justify-center">
+                <div className="w-10 h-10 bg-accent/5 text-accent rounded-md border border-accent/20 flex items-center justify-center">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <h3 className="font-display text-xl font-bold text-white uppercase">
+                <h3 className="font-display text-xl font-bold text-neutral-900 uppercase">
                   {currentLanguage === 'th' ? SERVICES_DATA[3].titleTh : SERVICES_DATA[3].titleEn}
                 </h3>
-                <p className="text-sm text-neutral-300 max-w-xl">
+                <p className="text-sm text-neutral-600 max-w-xl">
                   {currentLanguage === 'th' ? SERVICES_DATA[3].descriptionTh : SERVICES_DATA[3].descriptionEn}
                 </p>
                 <button
@@ -375,7 +375,7 @@ export default function HomeView({
                     setActiveView('services');
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                   }}
-                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-white flex items-center space-x-1.5 pt-2"
+                  className="text-[11px] font-bold uppercase tracking-wider text-accent hover:text-neutral-900 flex items-center space-x-1.5 pt-2"
                 >
                   <span>{currentLanguage === 'th' ? 'ดูบริการออนไลน์โคดิเนชัน' : 'Details'}</span>
                   <span>→</span>
@@ -387,56 +387,56 @@ export default function HomeView({
       </section>
 
       {/* 5. Why Choose Us Section */}
-      <section className="bg-[#0A0A0A] py-24 text-white border-b border-white/10" id="why-choose-us">
+      <section className="bg-white py-24 text-neutral-900 border-b border-neutral-200" id="why-choose-us">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-[10px] font-bold text-accent uppercase tracking-widest font-mono">
               Value Proposition
             </span>
-            <h2 className="font-display text-3xl sm:text-4xl font-black text-white mt-3 uppercase tracking-tight">
+            <h2 className="font-display text-3xl sm:text-4xl font-black text-neutral-900 mt-3 uppercase tracking-tight">
               {t.whyTitle}
             </h2>
-            <p className="text-sm text-neutral-400 mt-3">
+            <p className="text-sm text-neutral-500 mt-3">
               {t.whySubtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="p-8 bg-[#0F0F0F] rounded-lg border border-white/10 hover:border-accent transition-all">
-              <div className="w-12 h-12 bg-accent/10 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/20">
+            <div className="p-8 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-accent transition-all shadow-sm">
+              <div className="w-12 h-12 bg-accent/5 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/10">
                 <Award className="w-6 h-6" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white mb-3 uppercase">
+              <h3 className="font-display text-lg font-bold text-neutral-900 mb-3 uppercase">
                 {t.whyReason1Title}
               </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-neutral-500 leading-relaxed">
                 {t.whyReason1Desc}
               </p>
             </div>
 
             {/* Card 2 */}
-            <div className="p-8 bg-[#0F0F0F] rounded-lg border border-white/10 hover:border-accent transition-all">
-              <div className="w-12 h-12 bg-accent/10 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/20">
+            <div className="p-8 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-accent transition-all shadow-sm">
+              <div className="w-12 h-12 bg-accent/5 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/10">
                 <Truck className="w-6 h-6" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white mb-3 uppercase">
+              <h3 className="font-display text-lg font-bold text-neutral-900 mb-3 uppercase">
                 {t.whyReason2Title}
               </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-neutral-500 leading-relaxed">
                 {t.whyReason2Desc}
               </p>
             </div>
 
             {/* Card 3 */}
-            <div className="p-8 bg-[#0F0F0F] rounded-lg border border-white/10 hover:border-accent transition-all">
-              <div className="w-12 h-12 bg-accent/10 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/20">
+            <div className="p-8 bg-neutral-50 rounded-lg border border-neutral-200 hover:border-accent transition-all shadow-sm">
+              <div className="w-12 h-12 bg-accent/5 text-accent rounded-md flex items-center justify-center mb-6 border border-accent/10">
                 <Globe className="w-6 h-6" />
               </div>
-              <h3 className="font-display text-lg font-bold text-white mb-3 uppercase">
+              <h3 className="font-display text-lg font-bold text-neutral-900 mb-3 uppercase">
                 {t.whyReason3Title}
               </h3>
-              <p className="text-sm text-neutral-400 leading-relaxed">
+              <p className="text-sm text-neutral-500 leading-relaxed">
                 {t.whyReason3Desc}
               </p>
             </div>
@@ -445,17 +445,17 @@ export default function HomeView({
       </section>
 
       {/* 6. Portfolio Preview Section */}
-      <section className="bg-[#0A0A0A] py-24 text-white border-b border-white/10" id="portfolio-preview">
+      <section className="bg-neutral-50 py-24 text-neutral-900 border-b border-neutral-200" id="portfolio-preview">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-6">
             <div>
               <span className="text-[10px] font-bold text-accent uppercase tracking-widest font-mono">
                 Recent Portfolios
               </span>
-              <h2 className="font-display text-3xl sm:text-4xl font-black text-white mt-3 uppercase tracking-tight">
+              <h2 className="font-display text-3xl sm:text-4xl font-black text-neutral-900 mt-3 uppercase tracking-tight">
                 {t.portTitle}
               </h2>
-              <p className="text-sm text-neutral-400 mt-2">
+              <p className="text-sm text-neutral-500 mt-2">
                 {t.portSubtitle}
               </p>
             </div>
@@ -465,7 +465,7 @@ export default function HomeView({
                   setActiveView('portfolio');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-6 py-3 rounded-lg text-xs font-black uppercase tracking-widest border border-white/10 hover:border-white/20 hover:bg-[#0F0F0F] text-white transition-all cursor-pointer inline-block"
+                className="px-6 py-3 rounded-lg text-xs font-black uppercase tracking-widest border border-neutral-200 hover:border-neutral-300 hover:bg-neutral-100 text-neutral-700 transition-all cursor-pointer inline-block"
               >
                 {t.portViewMore}
               </button>
@@ -477,7 +477,7 @@ export default function HomeView({
             {PORTFOLIO_DATA.map((item) => (
               <div
                 key={item.id}
-                className="group bg-[#0F0F0F] rounded-lg border border-white/10 overflow-hidden hover:border-accent transition-all"
+                className="group bg-white rounded-lg border border-neutral-200 overflow-hidden hover:border-accent transition-all shadow-sm"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <img
@@ -497,15 +497,15 @@ export default function HomeView({
                     <MapPin className="w-3.5 h-3.5 text-accent" />
                     <span>{currentLanguage === 'th' ? item.locationTh : item.locationEn}</span>
                   </div>
-                  <h3 className="font-display text-base font-bold text-white group-hover:text-accent transition-colors uppercase">
+                  <h3 className="font-display text-base font-bold text-neutral-900 group-hover:text-accent transition-colors uppercase">
                     {currentLanguage === 'th' ? item.titleTh : item.titleEn}
                   </h3>
-                  <p className="text-xs text-neutral-400 leading-relaxed line-clamp-2">
+                  <p className="text-xs text-neutral-500 leading-relaxed line-clamp-2">
                     {currentLanguage === 'th' ? item.descriptionTh : item.descriptionEn}
                   </p>
-                  <div className="pt-4 border-t border-white/10 flex justify-between items-center text-xs text-neutral-500 font-mono">
+                  <div className="pt-4 border-t border-neutral-200 flex justify-between items-center text-xs text-neutral-500 font-mono">
                     <span>{currentLanguage === 'th' ? 'ขนาดทีมงาน:' : 'Staff Deploy:'}</span>
-                    <span className="text-white font-semibold">
+                    <span className="text-neutral-900 font-semibold">
                       {currentLanguage === 'th' ? item.staffCountTh : item.staffCountEn}
                     </span>
                   </div>
@@ -517,8 +517,8 @@ export default function HomeView({
       </section>
 
       {/* 7. Contact Section */}
-      <section className="bg-[#0A0A0A] py-24 text-white relative overflow-hidden" id="contact-section">
-        <div className="absolute inset-y-0 right-0 w-1/3 bg-radial-at-r from-accent/15 to-transparent pointer-events-none opacity-80" />
+      <section className="bg-navy py-24 text-white relative overflow-hidden" id="contact-section">
+        <div className="absolute inset-y-0 right-0 w-1/3 bg-radial-at-r from-accent/10 to-transparent pointer-events-none opacity-80" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
@@ -531,19 +531,19 @@ export default function HomeView({
                 <h2 className="font-display text-3xl sm:text-4xl font-black text-white mt-3 uppercase tracking-tight">
                   {t.contactTitle}
                 </h2>
-                <p className="text-sm text-neutral-400 mt-3 leading-relaxed">
+                <p className="text-sm text-neutral-300 mt-3 leading-relaxed">
                   {t.contactSubtitle}
                 </p>
               </div>
 
               {/* Live Calculator indicator helper */}
               {appliedStaffEstimate && (
-                <div className="p-5 rounded-lg bg-[#0F0F0F] border border-accent/30 text-white text-xs flex flex-col gap-2.5 shadow-xl">
+                <div className="p-5 rounded-lg bg-accent/10 border border-accent/25 text-white text-xs flex flex-col gap-2.5 shadow-sm">
                   <div className="flex items-center gap-2 font-bold uppercase tracking-widest text-accent">
                     <CheckCircle className="w-4 h-4" />
                     <span>{currentLanguage === 'th' ? 'แนบใบเสนอราคาสตาฟแล้ว' : 'Sourced staffing estimate attached'}</span>
                   </div>
-                  <p className="text-[11px] leading-relaxed text-neutral-300 font-mono bg-black/40 p-2.5 rounded border border-white/5">
+                  <p className="text-[11px] leading-relaxed text-neutral-200 font-mono bg-navy/60 p-2.5 rounded border border-white/10">
                     {appliedStaffEstimate}
                   </p>
                   <button
@@ -557,7 +557,7 @@ export default function HomeView({
               )}
 
               {/* Details card */}
-              <div className="p-8 bg-[#0F0F0F] rounded-lg border border-white/10 space-y-6">
+              <div className="p-8 bg-white/5 border border-white/10 rounded-lg space-y-6 shadow-sm">
                 <h3 className="font-display text-base font-bold text-white uppercase tracking-wide">
                   {t.contactCardTitle}
                 </h3>
@@ -592,11 +592,11 @@ export default function HomeView({
 
             {/* Right Column: Interactive contact form */}
             <div className="lg:col-span-7">
-              <form onSubmit={handleSubmit} className="bg-[#0F0F0F] p-8 sm:p-10 rounded-lg border border-white/10 space-y-6">
+              <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 p-8 sm:p-10 rounded-lg space-y-6 shadow-sm">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Name field */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-mono block">
+                    <label className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest font-mono block">
                       {t.formName} <span className="text-accent">*</span>
                     </label>
                     <input
@@ -605,14 +605,14 @@ export default function HomeView({
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-700"
+                      className="w-full bg-navy/60 border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-500"
                       placeholder={currentLanguage === 'th' ? 'กรุณากรอกชื่อของคุณ' : 'Enter your name'}
                     />
                   </div>
 
                   {/* Phone field */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-mono block">
+                    <label className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest font-mono block">
                       {t.formPhone} <span className="text-accent">*</span>
                     </label>
                     <input
@@ -621,7 +621,7 @@ export default function HomeView({
                       required
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-700 font-mono"
+                      className="w-full bg-navy/60 border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-500 font-mono"
                       placeholder={currentLanguage === 'th' ? 'เช่น 081-234-5678' : 'e.g. 0812345678'}
                     />
                   </div>
@@ -630,7 +630,7 @@ export default function HomeView({
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   {/* Email field */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-mono block">
+                    <label className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest font-mono block">
                       {t.formEmail} <span className="text-accent">*</span>
                     </label>
                     <input
@@ -639,14 +639,14 @@ export default function HomeView({
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-700 font-mono"
+                      className="w-full bg-navy/60 border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-500 font-mono"
                       placeholder="email@company.com"
                     />
                   </div>
 
                   {/* Service dropdown */}
                   <div className="space-y-2">
-                    <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-mono block">
+                    <label className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest font-mono block">
                       {t.formService} <span className="text-accent">*</span>
                     </label>
                     <select
@@ -654,20 +654,20 @@ export default function HomeView({
                       required
                       value={formData.service}
                       onChange={handleChange}
-                      className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none"
+                      className="w-full bg-navy border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all appearance-none cursor-pointer"
                     >
-                      <option value="" disabled>{t.formServicePlaceholder}</option>
-                      <option value="staffing">{currentLanguage === 'th' ? 'Event Staffing (สตาฟ, พริตตี้, เอ็มซี)' : 'Event Staffing'}</option>
-                      <option value="retail">{currentLanguage === 'th' ? 'Retail Support (Merchandiser / PC)' : 'Retail Support'}</option>
-                      <option value="roadshows">{currentLanguage === 'th' ? 'Roadshows & Brand Troops (คาราวานโปรโมท)' : 'Roadshows & Troops'}</option>
-                      <option value="onsite">{currentLanguage === 'th' ? 'On-site Management (ควบคุมดูแลหน้างาน)' : 'On-site Management'}</option>
+                      <option value="" disabled className="bg-navy">{t.formServicePlaceholder}</option>
+                      <option value="staffing" className="bg-navy">{currentLanguage === 'th' ? 'Event Staffing (สตาฟ, พริตตี้, เอ็มซี)' : 'Event Staffing'}</option>
+                      <option value="retail" className="bg-navy">{currentLanguage === 'th' ? 'Retail Support (Merchandiser / PC)' : 'Retail Support'}</option>
+                      <option value="roadshows" className="bg-navy">{currentLanguage === 'th' ? 'Roadshows & Brand Troops (คาราวานโปรโมท)' : 'Roadshows & Troops'}</option>
+                      <option value="onsite" className="bg-navy">{currentLanguage === 'th' ? 'On-site Management (ควบคุมดูแลหน้างาน)' : 'On-site Management'}</option>
                     </select>
                   </div>
                 </div>
 
                 {/* Message field */}
                 <div className="space-y-2">
-                  <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest font-mono block">
+                  <label className="text-[10px] font-bold text-neutral-300 uppercase tracking-widest font-mono block">
                     {t.formMessage}
                   </label>
                   <textarea
@@ -675,7 +675,7 @@ export default function HomeView({
                     rows={4}
                     value={formData.message}
                     onChange={handleChange}
-                    className="w-full bg-[#0A0A0A] border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-700"
+                    className="w-full bg-navy/60 border border-white/10 rounded-lg px-4 py-3.5 text-sm text-white focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-all placeholder:text-neutral-500"
                     placeholder={currentLanguage === 'th' ? 'ระบุข้อมูลเพิ่มเติมเพื่อให้ทีมงานตอบกลับคุณได้รวดเร็วขึ้น...' : 'Provide specific details (optional)...'}
                   />
                 </div>
@@ -685,14 +685,14 @@ export default function HomeView({
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-white bg-accent hover:bg-accent-hover shadow-xl shadow-accent/25 transition-all flex items-center justify-center space-x-2 cursor-pointer ${
+                    className={`w-full py-4.5 rounded-lg text-xs font-black uppercase tracking-widest text-navy bg-accent hover:bg-accent-hover shadow-xl shadow-accent/20 transition-all flex items-center justify-center space-x-2 cursor-pointer ${
                       isSubmitting ? 'opacity-85 cursor-not-allowed' : ''
                     }`}
                     id="btn-form-submit"
                   >
                     {isSubmitting ? (
                       <>
-                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-navy/30 border-t-navy rounded-full animate-spin" />
                         <span>{t.formSubmitting}</span>
                       </>
                     ) : (
