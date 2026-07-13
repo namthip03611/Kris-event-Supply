@@ -1,0 +1,6 @@
+{
+  "name": "KRIS Event Solutions",
+  "description": "Professional field staffing, brand activation and retail support agency in Thailand",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
