@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, X, ChevronRight, MessageSquare, Info, Sparkles, Send } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { Language, ViewType, QuoteRequest } from './types';
 import { translations } from './translations';
 import Header from './components/Header';
@@ -267,6 +268,9 @@ export default function App() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
